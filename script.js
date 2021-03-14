@@ -2,12 +2,12 @@ $(document).ready(function() {
 
     setTimeout(function() {
         $('#loading').fadeIn();
-    }, 100);
+    }, 0);
     setTimeout(function() {
         $('#loading').fadeOut();
     }, 2500);
     setTimeout(function() {
-        $('#login').fadeIn().stop();
+        $('#login').fadeIn();
     }, 2500);
 
     $('.owl-carousel').owlCarousel({
