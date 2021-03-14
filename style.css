@@ -62,7 +62,7 @@ h1 {
     border-radius: 0;
     box-shadow: none;
     font-size: 17px;
-    margin: 0 auto;
+    margin: 20px auto;
     outline: none;
     width: 70%;
 }
@@ -112,6 +112,7 @@ h1 {
 #pay, #ready {
     background-image: linear-gradient(to bottom, #f5f2e9, #e9e3d3, #ddd4bd, #d2c5a7, #c7b692);
     color: #271B0A;
+    height: 100% !important;
 }
 #classic-size .size, #custom-size .size,
 #classic-coffee .coffee, #custom-coffee .coffee,

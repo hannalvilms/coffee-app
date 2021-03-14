@@ -6,6 +6,9 @@ $(document).ready(function() {
     setTimeout(function() {
         $('#loading').fadeOut();
     }, 2500);
+    setTimeout(function() {
+        $('#login').fadeIn().stop();
+    }, 2500);
 
     $('.owl-carousel').owlCarousel({
         navigation: false,
