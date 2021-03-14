@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{flickity.pkgd, jquery-1.11.0, jquery-1.11.1, jquery-1.11.3, jquery-1.6.4, jquery-3.3.1, jquery-migrate-1.2.1, jquery.mobile-1.0rc2, jquery.mobile-1.4.5}" />
+  </component>
+</project>

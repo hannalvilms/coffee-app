@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <title>Basic mobile app</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
+    <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<div data-role="page" id="loading">
+    <div>
+        <img src="assets/panda.png" alt="panda">
+        <h1>We know you're tired so we'll be quick!</h1>
+    </div>
+</div>
+
+<div data-role="page" id="login">
+    <div class="login">
+        <h1>Log in</h1>
+        <div>
+            <input type="text" placeholder="Username" name="username" required>
+            <br>
+            <input type="password" placeholder="Password" name="password" required>
+            <br>
+            <button type="button" onclick="location.href='#choose'">Login</button>
+            <h4 onclick="location.href='#register'">Or register</h4>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="register">
+    <div class="register">
+        <h1>Register</h1>
+        <div>
+            <input type="text" placeholder="Name" name="name" required>
+            <br>
+            <input type="email" placeholder="E-mail" name="email" required>
+            <br>
+            <input type="text" placeholder="Username" name="username" required>
+            <br>
+            <input type="password" placeholder="Password" name="password" required>
+            <br>
+            <button type="button" onclick="location.href='#login'">Register</button>
+            <h4 onclick="location.href='#login'">Back</h4>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="choose">
+    <div onclick="location.href='#classic-size'">
+        <h1>Choose a classic</h1>
+        <img src="assets/classic.png" alt="classic">
+    </div>
+    <div onclick="location.href='#custom-size'">
+        <h1>Make your own</h1>
+        <img src="assets/custom.png" alt="custom">
+    </div>
+</div>
+
+<div data-role="page" id="classic-size">
+    <h1>Size</h1>
+
+    <div role="main" class="classic-size owl-carousel">
+        <div class="item size small">
+            <img src="assets/small.png" alt="small">
+            <h3>Small</h3>
+        </div>
+        <div class="item size medium" >
+            <img src="assets/medium.png" alt="medium">
+            <h3>Medium</h3>
+        </div>
+        <div class="item size large">
+            <img src="assets/large.png" alt="large">
+            <h3>Large</h3>
+        </div>
+        <div class="item size extra-large">
+            <img src="assets/extra-large.png" alt="extra-large">
+            <h3>Extra Large</h3>
+        </div>
+    </div>
+    <h2 class="next" onclick="location.href='#classic-coffee'">Next</h2>
+</div>
+
+
+<div data-role="page" id="classic-coffee">
+    <h1>Coffee selection</h1>
+
+    <div role="main" class="coffee-selection owl-carousel">
+        <div class="item coffee latte">
+            <img src="assets/latte.png" alt="latte">
+            <h3>Caffè Latte</h3>
+        </div>
+        <div class="item coffee mocha">
+            <img src="assets/mocha.png" alt="mocha">
+            <h3>Caffè Mocha</h3>
+        </div>
+        <div class="item coffee cappuccino">
+            <img src="assets/cappuccino.png" alt="cappuccino">
+            <h3>Cappuccino</h3>
+        </div>
+        <div class="item coffee lait">
+            <img src="assets/lait.png" alt="lait">
+            <h3>Cafè au Lait</h3>
+        </div>
+    </div>
+    <h2 class="next" onclick="location.href='#classic-milk'">Next</h2>
+</div>
+
+<div data-role="page" id="classic-milk">
+    <h1>Milk</h1>
+    <div class="milk-selection owl-carousel">
+        <div class="item milk cow">
+            <img src="assets/cow.png" alt="cowmilk">
+            <h3>Cow</h3>
+        </div>
+        <div class="item milk oat">
+            <img src="assets/oat.png" alt="oatmilk">
+            <h3>Oat</h3>
+        </div>
+        <div class="item milk coconut">
+            <img src="assets/coconut.png" alt="coconutmilk">
+            <h3>Coconut</h3>
+        </div>
+        <div class="item milk soy">
+            <img src="assets/soy.png" alt="soymilk">
+            <h3>Soy</h3>
+        </div>
+    </div>
+    <h2 class="next" onclick="location.href='#classic-order'">Next</h2>
+</div>
+
+<div data-role="page" id="classic-order">
+    <h1>Your order</h1>
+    <div id="foobar"></div>
+    <div class="order-button">
+        <h2 class="next pay" onclick="location.href='#pay'">Pay</h2>
+    </div>
+</div>
+
+<div data-role="page" id="custom-size">
+    <h1>Size</h1>
+    <div class="custom-size owl-carousel">
+        <div class="item size small">
+            <img src="assets/small.png" alt="small">
+            <h3>Small</h3>
+        </div>
+        <div class="item size medium">
+            <img src="assets/medium.png" alt="medium">
+            <h3>Medium</h3>
+        </div>
+        <div class="item size large">
+            <img src="assets/large.png" alt="large">
+            <h3>Large</h3>
+        </div>
+        <div class="item size extra-large">
+            <img src="assets/extra-large.png" alt="extra-large">
+            <h3>Extra Large</h3>
+        </div>
+    </div>
+    <h2 class="next" onclick="location.href='#custom-coffee'">Next</h2>
+</div>
+
+<div data-role="page" id="custom-coffee">
+     <h1>Coffee selection</h1>
+    <div class="coffee-selection owl-carousel">
+        <div class="item coffee shot">
+            <img src="assets/shot.png" alt="shot">
+            <h3>1 Shot</h3>
+        </div>
+        <div class="item coffee twoshots">
+            <img src="assets/2shots.png" alt="2shots">
+            <h3>2 Shots</h3>
+        </div>
+        <div class="item coffee threeshots">
+            <img src="assets/3shots.png" alt="3shots">
+            <h3>3 Shots</h3>
+        </div>
+        <div class="item coffee press">
+            <img src="assets/press.png" alt="french-press">
+            <h3>French Press</h3>
+        </div>
+    </div>
+    <h2 class="next" onclick="location.href='#custom-milk'">Next</h2>
+</div>
+
+<div data-role="page" id="custom-milk">
+    <h1>Milk selection</h1>
+    <div class="milk-selection owl-carousel">
+        <div class="item milk cow">
+            <img src="assets/cow.png" alt="cowmilk">
+            <h3>Cow</h3>
+        </div>
+        <div class="item milk oat">
+            <img src="assets/oat.png" alt="oatmilk">
+            <h3>Oat</h3>
+        </div>
+        <div class="item milk coconut">
+            <img src="assets/coconut.png" alt="coconutmilk">
+            <h3>Coconut</h3>
+        </div>
+        <div class="item milk soy">
+            <img src="assets/soy.png" alt="soymilk">
+            <h3>Soy</h3>
+        </div>
+    </div>
+    <h2 class="next" onclick="location.href='#milk-balance'">Next</h2>
+</div>
+
+<div data-role="page" id="milk-balance">
+    <h1>Milk Balance</h1>
+    <div>
+        <input type="range" name="slider-1" id="slider-1" value="50" min="0" max="100">
+    </div>
+    <h2 class="next" onclick="location.href='#milk-foam'">Next</h2>
+</div>
+
+<div data-role="page" id="milk-foam">
+    <h1>Milk Foam</h1>
+    <input type="range" name="slider-1" id="slider-2" value="50" min="0" max="100">
+    <h2 class="next" onclick="location.href='#syrup'">Next</h2>
+</div>
+
+<div data-role="page" id="syrup">
+    <h1>Syrup Selection</h1>
+    <div class="syrup">
+        <img src="assets/none.png" alt="">
+        <p>None</p>
+    </div>
+    <div class="syrup">
+        <img src="assets/coconut-syrup.png" alt="coconut-syrup">
+        <p>Coconut</p>
+    </div>
+    <div class="syrup">
+        <img src="assets/mint.png" alt="mint">
+        <p>Peppermint</p>
+    </div>
+    <div class="syrup">
+        <img src="assets/maple.png" alt="maple">
+        <p>Maple-spice</p>
+    </div>
+    <div class="syrup">
+        <img src="assets/hazelnut.png" alt="hazelnut">
+        <p>Hazelnut</p>
+    </div>
+    <h2 class="next" onclick="location.href='#additives'">Next</h2>
+</div>
+
+<div data-role="page" id="additives">
+    <h1>Additives</h1>
+    <div class="additives none" id="none">
+        <img src="assets/none.png" alt="">
+        <p>None</p>
+    </div>
+    <div class="additives codensed" id="codensed">
+        <img src="assets/codensed.png" alt="codensed-milk">
+        <p>Codensed Milk</p>
+    </div>
+    <div class="additives honey" id="honey">
+        <img src="assets/honey.png" alt="honey">
+        <p>Honey</p>
+    </div>
+    <div class="additives marshmallow">
+        <img src="assets/marshmallow.png" alt="marshmallow">
+        <p>Marshmallows</p>
+    </div>
+    <div class="additives whipped">
+        <img src="assets/whipped.png" alt="whipped-cream">
+        <p>Whipped Cream</p>
+    </div>
+    <h2 class="next" onclick="location.href='#custom-order'">Next</h2>
+</div>
+
+<div data-role="page" id="custom-order">
+    <h1>Your Order</h1>
+    <div id="foo"></div>
+    <div class="order-button">
+        <h2 class="next pay" onclick="location.href='#pay'">Pay</h2>
+    </div>
+</div>
+
+<div data-role="page" id="pay">
+    <h1>Payment in progress</h1>
+</div>
+
+<div data-role="page" id="ready">
+    <div>
+        <h1>Your coffee will be ready shortly. Enjoy!</h1>
+        <img src="assets/pandatwo.png" alt="order-image">
+    </div>
+</div>
+
+<script src="owlcarousel/owl.carousel.min.js"></script>
+</body>
+</html>
